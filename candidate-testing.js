@@ -29,17 +29,20 @@ function askForName() {
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-for (let i = 0; i < questions.length; i++) { candidateAnswers.push((input.question(questions[i]));
+for (let i = 0; i < questions.length; i++) { candidateAnswers.push((input.question(questions[i])));
 }
 
 }
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer == "Sally Ride") {
-  console.log("Correct!");
-} else {
-  console.log("Incorrect");
+
+let numberCorrectlyAnswered = 0
+
+for (let i = 0; i < correctAnswers.length; i++) { 
+if (candidateAnswers[i].toLowerCase()== correctAnswers[i].toLowerCase()) {
+  numberCorrectlyAnswered++;
+  }
 }
 
 
