@@ -42,15 +42,26 @@ let numberCorrectlyAnswered = 0
 for (let i = 0; i < correctAnswers.length; i++) { 
 if (candidateAnswers[i].toLowerCase()== correctAnswers[i].toLowerCase()) {
   numberCorrectlyAnswered++;
-  }
+}
 }
 
 
   let grade;
-  
+  grade = (numberCorrectlyAnswered / questions.length) * 100
+  if (grade >= 80) {
+    testResults = "Passed";
+  } else {
+    testResults = "Failed"
+  }
+
+console.log(`\n Candidate Name: ${candidateName}`)
+for (let i = 0; questions.length; i++) {
+  console.log(`${i +1}) ${questions[i]}\nYour Answer: ${candidateAnswers[i]}\nCorrect Answer: ${correctAnswers[i]}\n`);
+}
 
   return grade;
 }
+
 
 function runProgram() {
   askForName();
