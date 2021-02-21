@@ -25,14 +25,18 @@ function askForName() {
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
+candidateAnswer = input.question("1) " + question);
 
 
 }
 
 function gradeQuiz(candidateAnswers) {
-
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
+if (candidateAnswer === "Sally Ride");{
+  console.log ("Correct!");
+  } else if (candidateAnswer === !'Sally Ride');
+  console.log ("Incorrect.");
+  }
 
   let grade;
   
@@ -43,7 +47,7 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  console.log('\n' + `Hello, ${candidateName}! Let's get started.` + '\n');
+  console.log('\n' + `Hello, ${candidateName}!` + '\n');
   
   askQuestion();
   gradeQuiz(this.candidateAnswers);
